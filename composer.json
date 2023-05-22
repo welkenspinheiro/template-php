@@ -1,0 +1,21 @@
+{
+    "name": "cti/template",
+    "autoload": {
+        "psr-4": {
+            "app\\": "app/"
+        }
+    },
+    "scripts": {
+        "server": "php -S localhost:8000 -t public"
+    },
+    "authors": [
+        {
+            "name": "welkenspinheiro",
+            "email": "welkenspinheiro@gmail.com"
+        }
+    ],
+    "require": {},
+    "config": {
+        "process-timeout": 0
+    }
+}
