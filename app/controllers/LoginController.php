@@ -8,4 +8,9 @@ class LoginController
     {
         var_dump('LOGIN CONTROLLER');
     }
+
+    public function store()
+    {
+        var_dump('Login store');
+    }
 }
