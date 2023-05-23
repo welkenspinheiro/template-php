@@ -24,11 +24,14 @@
             </article>
         </section>
         <section class="container-right">
+            <article class="logo-img">
+                <img src="./assets/image/logo_login.png" alt="">
+            </article>
             <h1>Faca seu login</h1>
             <form action="/login" method="post" class="form-login">
                 <div>
-                    <label for="">Usuario</label>
-                    <input type="text" name="username" class="input input-dark" placeholder="Usuario">
+                    <label for="">E-mail</label>
+                    <input type="email" name="email" class="input input-dark" placeholder="E-mail">
                 </div>
                 <div class="passwordContainer">
                     <label for="">Senha</label>
