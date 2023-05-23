@@ -36,5 +36,5 @@ function view(string $view, array $data = [])
 
 function redirect(string $to)
 {
-  return header('Location: '.$to);
+    return header('Location: ' . $to);
 }
