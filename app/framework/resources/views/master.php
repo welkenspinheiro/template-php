@@ -10,6 +10,7 @@
     <h1>Dashboard</h1>
     <div class="conatiner">
         <?php echo $this->load(); ?>
+        <?php echo $this->upper('Welkens'); ?>
     </div>
 </body>
 </html>

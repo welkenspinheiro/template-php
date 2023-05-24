@@ -3,12 +3,14 @@
 namespace app\framework\classes;
 
 use Exception;
+use ReflectionClass;
 
 class Engine
 {
     private ?string $layout;
     private string $content;
     private array $data;
+    private array $dependencies;
 
     public function render(String $view, array $data)
     {
@@ -37,6 +39,25 @@ class Engine
         return $content;
     }
 
+    public function dependencies(array $dependencies)
+    {
+        foreach ($dependencies as $dependency) {
+            $className = strtolower((new ReflectionClass($dependency))->getShortName());
+            $this->dependencies[$className] = $dependency;
+        }
+    }
+
+    public function __call(string $name, array $arguments)
+    {
+        if(!method_exists($this->dependencies['macros'],$name)){
+            throw new Exception("Macro {$name} nao existe");
+        }
+        if(empty($arguments)){
+            throw new Exception("Metodo {$name} precisa de 1 paramentro");
+        }
+        return $this->dependencies['macros']->$name($arguments[0]);
+    }
+
     private function load()
     {
         return !empty($this->content) ? $this->content : '';
@@ -49,4 +70,5 @@ class Engine
 
         return $this;
     }
+
 }
