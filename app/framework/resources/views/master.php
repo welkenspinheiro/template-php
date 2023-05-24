@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?=$title;?></title>
-    <link rel="stylesheet" href="./assets/css/global.css"> <!-- Referência do CSS Global -->
+    <link rel="stylesheet" href="/assets/css/global.css"> <!-- Referência do CSS Global -->
+    <?php $this->section('css'); ?>
     <script src="https://unpkg.com/feather-icons"></script> <!-- Biblioteca do Feather Icons -->
 </head>
 <body>
@@ -28,6 +29,6 @@
         </section>
     </section>
 
-    <script src="./assets/js/scriptPrincipal.js"></script>
+    <script src="/assets/js/scriptPrincipal.js"></script>
 </body>
 </html>

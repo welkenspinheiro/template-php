@@ -11,6 +11,8 @@ class Engine
     private string $content;
     private array $data;
     private array $dependencies;
+    private array $section;
+    private string $actionSection;
 
     public function render(String $view, array $data)
     {
@@ -69,6 +71,28 @@ class Engine
         $this->data = $data;
 
         return $this;
+    }
+
+    private function session(string $session)
+    {
+        return $_SESSION[$session] ?? '';
+    }
+
+    private function section(string $name)
+    {
+        echo $this->section[$name] ?? null;
+    }
+
+    private function start(string $name)
+    {
+        ob_start();
+        $this->actionSection = $name;
+    }
+
+    private function stop()
+    {
+        $this->section[$this->actionSection] = ob_get_contents();
+        ob_end_clean();
     }
 
 }
