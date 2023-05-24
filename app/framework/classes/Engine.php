@@ -6,6 +6,10 @@ use Exception;
 
 class Engine
 {
+    private ?string $layout;
+    private string $content;
+    private array $data;
+
     public function render(String $view, array $data)
     {
         $view = dirname(__FILE__, 2) . "/resources/views/{$view}.php";
@@ -22,6 +26,27 @@ class Engine
 
         ob_end_clean();
 
+        if (!empty($this->layout)) {
+            $this->content = $content;
+            $data = array_merge($this->data, $data);
+            $layout = $this->layout;
+            $this->layout = null;
+            return $this->render($layout, $this->data);
+        }
+
         return $content;
+    }
+
+    private function load()
+    {
+        return !empty($this->content) ? $this->content : '';
+    }
+
+    private function extends(string $layout, array $data = [])
+    {
+        $this->layout = $layout;
+        $this->data = $data;
+
+        return $this;
     }
 }
