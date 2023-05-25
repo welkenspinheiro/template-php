@@ -30,5 +30,6 @@
     </section>
 
     <script src="/assets/js/scriptPrincipal.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
