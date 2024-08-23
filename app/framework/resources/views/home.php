@@ -24,9 +24,6 @@
             </article>
         </section>
         <section class="container-right">
-            <article class="logo-img">
-                <img src="./assets/image/logo_login.png" alt="">
-            </article>
             <h1>Faca seu login</h1>
             <form action="/login" method="post" class="form-login">
                 <div>

@@ -4,7 +4,15 @@
 
 <?php $this->start('menu'); ?>
 <li>
-    <a href="/dashboard/account"  class="active">
-        <i data-feather="archive"></i> Contas a pagar</a>
+    <a href="/dashboard/account" class="active">
+        <i data-feather="dollar-sign"></i> Contas a pagar</a>
 </li>
+<?php $this->stop(); ?>
+
+<?php $this->start('css'); ?>
+    <style>
+        #h1{
+            color: red;
+        }
+    </style>
 <?php $this->stop(); ?>

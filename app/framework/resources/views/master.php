@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?=$title;?></title>
+    <title><?= $title; ?></title>
     <link rel="stylesheet" href="/assets/css/global.css"> <!-- Referência do CSS Global -->
     <?php $this->section('css'); ?>
     <script src="https://unpkg.com/feather-icons"></script> <!-- Biblioteca do Feather Icons -->
 </head>
+
 <body>
-<section class="container-dashboard">
+    <section class="container-dashboard">
         <aside class="container-aside" id="container-aside">
             <?php require 'partials/sidebar.php' ?>
         </aside>
@@ -23,7 +25,8 @@
             </article>
 
             <main class="container-section-principal-content">
-                <?=$this->load();?>
+                <h1 id="h1">H1 na master</h1>
+                <?= $this->load(); ?>
             </main>
 
         </section>
@@ -32,4 +35,5 @@
     <script src="/assets/js/scriptPrincipal.js"></script>
     <script src="app.js"></script>
 </body>
+
 </html>

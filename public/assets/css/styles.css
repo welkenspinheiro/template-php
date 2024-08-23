@@ -214,6 +214,10 @@
     justify-content: center;
     margin: 5px 0;
 }
+.container-aside-menu-nav ul li:hover{
+    border-left: 8px solid rgba(255, 255, 255, 1);
+    color: white;
+}
 
 .container-aside-menu-nav ul li a{
     width: 100%;

@@ -1,6 +1,6 @@
 <section class="container-aside-logo">
     <i data-feather="x-circle" id="closeMenu"></i>
-    <img src="./assets/image/logo_dashboard.png" alt="Clube Full-Stack">
+    <img src="../assets/image/logo_dashboard.png" alt="Clube Full-Stack">
 </section>
 
 <section class="container-aside-menu">
@@ -13,7 +13,7 @@
             </li>
             <li>
                 <a href="/dashboard/account" class="active">
-                <i data-feather="home"></i> Contas</a>
+                <i data-feather="layers"></i> Contas</a>
             </li>
             <?php $this->section('menu'); ?>
         </ul>
